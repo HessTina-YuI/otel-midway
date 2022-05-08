@@ -9,8 +9,8 @@
 ```json
 {
   "scripts": {
-    "start:dev-jaeger": "cross-env NODE_ENV=local EXPORTER=jaeger SERVER_NAME=midway-server midway-bin dev --ts",
-    "start:dev-zipkin": "cross-env NODE_ENV=local EXPORTER=zipkin SERVER_NAME=midway-server midway-bin dev --ts",
+    "dev:jaeger": "cross-env NODE_ENV=local EXPORTER=jaeger SERVER_NAME=midway-server midway-bin dev --ts",
+    "dev:zipkin": "cross-env NODE_ENV=local EXPORTER=zipkin SERVER_NAME=midway-server midway-bin dev --ts",
     "dev": "cross-env NODE_ENV=local SERVER_NAME=midway-server midway-bin dev --ts"
   }
 }
@@ -19,12 +19,12 @@
 ## 启动说明
 产生的 tracing 数据发送到本地 jaeger
 ```shell
-npm run start:dev-jaeger
+npm run dev:jaeger
 ```
 
 产生的 tracing 数据发送到本地 zipkin
 ```shell
-npm run start:dev-zipkin
+npm run dev:zipkin
 ```
 
 产生的 tracing 数据发送到本地 opentelemetry-collector
